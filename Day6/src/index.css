@@ -1,0 +1,360 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #33354a;
+  background: #fff;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  text-align: left;
+}
+
+p {
+  margin-bottom: 14px;
+  color: #606277;
+  line-height: 1.7;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 8%;
+  background: #fff;
+  border-bottom: 1px solid #e8e5f5;
+}
+
+.navbar h2 {
+  margin: 0;
+  color: #7862d9;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.navbar div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.navbar button {
+  position: relative;
+  border: 0;
+  background: none;
+  color: #42445a;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.navbar button:hover,
+.navbar button.active {
+  color: #7862d9;
+}
+
+.navbar button.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #20bfae;
+}
+
+.home {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 50px 8%;
+  background: #fff;
+  text-align: left;
+}
+
+.home > div:first-child {
+  max-width: 680px;
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #f3f0ff;
+  color: #7862d9;
+  font-size: 13px;
+}
+
+.home h1 {
+  margin-bottom: 12px;
+  color: #7862d9;
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.2;
+}
+
+.home h1 span {
+  color: #33354a;
+}
+
+.home h2 {
+  margin-bottom: 18px;
+  color: #7862d9;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.home p {
+  max-width: 650px;
+  font-size: 16px;
+}
+
+.home button,
+.home a,
+.page button,
+.page a {
+  display: inline-block;
+  margin: 5px 8px 8px 0;
+  padding: 12px 20px;
+  border: 1px solid #20bfae;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.home button {
+  border: 0;
+  background: linear-gradient(100deg, #7862d9, #20bfae);
+  color: #fff;
+}
+
+.home a,
+.page button,
+.page a {
+  background: #fff;
+  color: #159e91;
+}
+
+.hero-image {
+  flex: 0 0 250px;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border: 5px solid #f0edff;
+  border-radius: 50%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  margin-top: 25px;
+}
+
+.stats h2 {
+  margin-bottom: 4px;
+  color: #7862d9;
+  font-size: 28px;
+}
+
+.stats p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* Other pages */
+.page {
+  min-height: 80vh;
+  padding: 45px 8%;
+  background: #fff;
+  text-align: left;
+}
+
+.page h1 {
+  margin-bottom: 15px;
+  color: #7862d9;
+  font-size: 32px;
+}
+
+.page h2 {
+  margin-bottom: 10px;
+  color: #7862d9;
+  font-size: 20px;
+}
+
+.page h3 {
+  margin-bottom: 8px;
+  color: #6251b5;
+}
+
+.page p,
+.page li {
+  color: #606277;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.page ul {
+  padding-left: 20px;
+}
+
+/* Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.card {
+  padding: 22px;
+  border: 1px solid #e8e5f5;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.card h2 {
+  font-size: 18px;
+}
+
+/* Skill tags */
+.skills,
+.skill-list,
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.skills span,
+.skill-list span,
+.tags span {
+  padding: 7px 12px;
+  border: 1px solid #e2dcff;
+  border-radius: 7px;
+  background: #f6f3ff;
+  color: #6251b5;
+  font-size: 13px;
+}
+
+/* Forms */
+.page input,
+.page textarea,
+.page select {
+  width: 100%;
+  margin: 8px 0 15px;
+  padding: 12px;
+  border: 1px solid #dedbea;
+  border-radius: 8px;
+  background: #fff;
+  color: #33354a;
+  font: inherit;
+}
+
+.page input:focus,
+.page textarea:focus {
+  outline: 1px solid #7862d9;
+}
+
+/* Experience */
+.timeline,
+.experience-item {
+  margin: 18px 0;
+  padding: 20px;
+  border-left: 3px solid #7862d9;
+  border-radius: 0 8px 8px 0;
+  background: #f8f7ff;
+}
+
+
+
+.theme-toggle {
+  padding: 8px 12px;
+  border: 1px solid #7862d9;
+  border-radius: 8px;
+  background: transparent;
+  color: #7862d9;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: #f3f0ff;
+}
+
+html[data-theme="dark"] body,
+html[data-theme="dark"] .home,
+html[data-theme="dark"] .page {
+  background: #171b2e;
+  color: #f1f1fa;
+}
+
+html[data-theme="dark"] .navbar {
+  background: #20243a;
+  border-color: #343851;
+}
+
+html[data-theme="dark"] .navbar button {
+  color: #d5d6e5;
+}
+
+html[data-theme="dark"] .navbar button.active,
+html[data-theme="dark"] .navbar button:hover {
+  color: #a78bfa;
+}
+
+html[data-theme="dark"] .home h1 span,
+html[data-theme="dark"] .home h2,
+html[data-theme="dark"] .page h2,
+html[data-theme="dark"] .page h3 {
+  color: #a78bfa;
+}
+
+html[data-theme="dark"] .home p,
+html[data-theme="dark"] .page p,
+html[data-theme="dark"] .page li {
+  color: #c6c8da;
+}
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .timeline,
+html[data-theme="dark"] .experience-item {
+  background: #20243a;
+  border-color: #373b55;
+}
+
+html[data-theme="dark"] .page input,
+html[data-theme="dark"] .page textarea,
+html[data-theme="dark"] .page select {
+  background: #20243a;
+  color: #fff;
+  border-color: #454964;
+}
+
+html[data-theme="dark"] .theme-toggle {
+  color: #20bfae;
+  border-color: #20bfae;
+}
+
+html[data-theme="dark"] .theme-toggle:hover {
+  background: #ffffff12;
+}
